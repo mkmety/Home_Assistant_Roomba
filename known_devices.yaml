@@ -5,3 +5,11 @@ matt_phone:
   name: Matt
   picture: /local/matt3.jpg
   track: true
+
+app_matts_iphone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Phone
+  picture:
+  track: true
