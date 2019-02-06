@@ -31,10 +31,10 @@ Below are the steps and excerpts from my config files that allowed this to work 
 
 10. You will now need to add to your automations.yaml file to trigger and then run an action. See my automations.yaml file for what is       in my file. I'll try to break down the 2 jobs as best as I can.
 
-    Request cleaning when not home
+    Request cleaning when not home -
     When the state of my device goes from 'home' to 'not_home' (which is essentially from Home to Away) then send an iOS notification to     app_matts_iphone that states "Would you like to start the vacuum?" 
    
-    Start cleaning
+    Start cleaning - 
     When the notification has been fired it calls RUN_VACUUM which was defined in configuration.yaml. 
     The title in the ios part of the configuration.yaml file shows what the button on the iOS notification will say. 
     Going back to automations.yaml the action will be to start_pause on the entity vacuum.roomba
