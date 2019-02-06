@@ -39,3 +39,8 @@ Below are the steps and excerpts from my config files that allowed this to work 
     The title in the ios part of the configuration.yaml file shows what the button on the iOS notification will say. 
     Going back to automations.yaml the action will be to start_pause on the entity vacuum.roomba
 
+11. You should now have 2 new automation entities in Developer tools > State. They are called automation.request_cleaning_when_not_home     and automation.start_cleaning. You can test to see if these work by clicking the More Info box and triggering the job. Otherwise,       you'd need to disconnect from your WiFi and wait 10 minutes. 
+
+   These notifications are really useful on the Apple Watch and come through very clean. 
+   
+I hope that helps some folks. 
