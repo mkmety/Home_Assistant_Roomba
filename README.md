@@ -1,5 +1,5 @@
 # Home_Assistant_Roomba
-Using HA to send iOS notifications to run when away.
+**Using HA to send iOS notifications to run Roomba 980 when away.**
 
 I decided I wanted Home Assistant to send a notification to my iOS device whenever I was 'Away'. For me, this meant whenever my phone was not connected to my WiFi, home assistant would show me as 'Away'. 
 
