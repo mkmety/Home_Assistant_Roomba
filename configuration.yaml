@@ -1,0 +1,5 @@
+vacuum:
+  - platform: roomba
+    host: [IP Address of your roomba. I set a static IP in my router.]
+    username: [BLID from dorita980]
+    password: [PASSWORD from dorita980]
