@@ -1,0 +1,7 @@
+matt_phone:
+  hide_if_away: false
+  icon:
+  mac: [MAC of your device]
+  name: Matt
+  picture: /local/matt3.jpg
+  track: true
