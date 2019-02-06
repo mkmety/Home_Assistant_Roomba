@@ -17,9 +17,14 @@ Below are the steps and excerpts from my config files that allowed this to work 
 
 3. This is where Roomba comes into play now. You'll need to grab the BLID and password of your Roomba device. I used the following          library in order to grab this information. I spun up a docker with ubuntu but feel free to run this however you can.                    https://github.com/koalazak/dorita980#how-to-get-your-usernameblid-and-password
 
-4. You now need to add roomba as a device in your configuration.yaml file. Again, I assigned a static IP to my roomba since I did run into an issue where DHCP assigned it's IP to another device and everything went haywire until I fixed that. You'll need 
+4. You now need to add roomba as a device in your configuration.yaml file. Again, I assigned a static IP to my roomba since I did run      into an issue where DHCP assigned it's IP to another device and everything went haywire until I fixed that. You'll need to paste the    BLID into username and the password into password. 
 
+5. Now we'll work on the iOS portion. You'll need to download Home Assistant from the app store. I ran into some roadblocks with getting    Home Assistant to work on a remote network. I used Duck DNS to get a free dynamic DNS. iOS does not like when you don't use SSL and      it threw a ton of errors until I got some SSL certs. I used Let's Encrypt (https://letsencrypt.org/) since it's a trusted CA and that    allowed me to get connected securely. 
 
-You first need to add roomba to your configuration.yaml file (see configuraiton.yaml).
-2. The username and password can be retreived using the following library: https://github.com/koalazak/dorita980#how-to-get-your-usernameblid-and-password
-3. You then need to add the ios portion to your configuration.yaml file (see configuraiton.yaml).
+6. Once connected to your Home Assistant server in the iOS app you can update the Device ID to something more friendly. I chose            app_matts_iphone. This allowed me identify my device more easily. 
+
+7. In the iOS app you need to enable notificaitons in the "Notification Settings" of the app. Update push settings will pull the latest    changes from your Homse Assistant instance. You'll need to do this each time you make a change to notifications. 
+
+7. You should now see a change in Home Assistant > Developer tools > State. You should have a new Entity called                            device_tracker.app_matts_iphone or whatever you Device ID was in your iOS app. This allows you to create automations against that        device.
+
+8. You will now need to add iOS push notifications to your configuration.yaml. See the ios portion of my conifguration.yaml file for details. 
