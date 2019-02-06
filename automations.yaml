@@ -1,0 +1,22 @@
+- alias: Request cleaning when not home
+  trigger:
+    platform: state
+    entity_id: group.all_devices
+    from: 'home'
+    to: 'not_home'
+  action:
+    service: notify.ios_app_matts_iphone
+    data:
+      message: "Would you like to start the vacuum?"
+      data:
+        push:
+          category: "vacuum"
+- alias: Start cleaning
+  trigger:
+    platform: event
+    event_type: ios.notification_action_fired
+    event_data:
+      actionName: RUN_VACUUM
+  action:
+    - service: vacuum.start_pause
+      entity_id: vacuum.roomba
