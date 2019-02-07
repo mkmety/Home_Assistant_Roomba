@@ -7,7 +7,7 @@
   action:
     service: notify.ios_app_matts_iphone
     data:
-      message: "Would you like to start the vacuum?"
+      message: "Would you like to run DJ Roomba?"
       data:
         push:
           category: "vacuum"
