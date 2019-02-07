@@ -1,9 +1,9 @@
-matt_phone:
+matt_phone: #I updated this from the default string to something more user friendly
   hide_if_away: false
   icon:
   mac: [MAC of your device]
-  name: Matt
-  picture: /local/matt3.jpg
+  name: Matt #I gave it a more user friendly name which shows up on badges
+  picture: /local/matt3.jpg #Pictures will show up on badges.
   track: true
 
 app_matts_iphone:
