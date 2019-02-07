@@ -1,9 +1,9 @@
 device_tracker:
   - platform: nmap_tracker
     hosts: 
-      - 10.0.0.17
+      - 10.0.0.17 #This should be changed to match the IP address of your device
     home_interval: 10
-    exclude: 10.0.0.34
+    exclude: 10.0.0.34 #This is the IP address my Home Assistant docker is using
 
 vacuum:
   - platform: roomba
@@ -18,6 +18,6 @@ ios:
         identifier: 'vacuum'
         actions:
           - identifier: 'RUN_VACUUM'
-            title: 'Start cleaning'
+            title: 'Start cleaning' #This is what the iOS button will say on the notification
             activationMode: 'background'
             authenticationRequired: no
