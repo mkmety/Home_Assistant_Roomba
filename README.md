@@ -1,9 +1,9 @@
 # Home_Assistant_Roomba
-**Using HA to send iOS notifications to run Roomba 980 when away.**
+**Using Home Assistant to send iOS notifications to run Roomba 980 when away.**
 
-I decided I wanted Home Assistant to send a notification to my iOS device whenever I was 'Away'. For me, this meant whenever my phone was not connected to my WiFi, home assistant would show me as 'Away'. 
+I decided I wanted Home Assistant to send a notification to my iOS device whenever I was away. For me, this meant whenever my phone was not connected to my WiFi, home assistant would show me as 'Away'. 
 
-After 10 minutes of being away, I would get a custom iOS notification from Home Assistant asking me if I'd like to start Roomba.
+After 10 minutes of being away, I would get a custom iOS notification from Home Assistant asking me if I'd like to start Roomba. Clicking "Start Cleaning" would send an API call to my Roomba to start cleaning.
 
 Below are the steps and excerpts from my config files that allowed this to work for me. 
 
